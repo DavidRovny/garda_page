@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Garda Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigace -->
+        <nav class="navbar">
+            <button type="button" class="navbar-toggle" onclick="toggleNavbar()">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <ul id="navbar-menu" class="navbar-menu">
+                <li><a href="#intro">Garda</a></li>
+                <li><a href="#article1">Novinky</a></li>
+                <li><a href="#article5">Article 5</a></li>
+                <li><a href="#article7">Article 7</a></li>
+                <li><a href="#kontakty">Kontakty</a></li>
+            </ul>
+        </nav>
+
+        <!-- Billboard -->
+        <div class="billboard">
+            <div class="image-billboard">
+                <img src="./assets/placeholder_3x1_very_short.png" alt="Billboard Image" class="desktop-image">
+                <img src="./assets/placeholder_9x8.png" alt="Billboard Image" class="tablet-image">
+                <img src="./assets/placeholder_9x16_short.png" alt="Billboard Image" class="mobile-image">
+            </div>
+            <div class="overlay-billboard"></div>
+            <h1>OKOŘSKÁ GARDA</h1>
+        </div>
+
+    <!-- Sekce "intro" -->
+    <section id="intro" class="intro">
+        <h2>Intro</h2>
+        <p>Toto je úvodní sekce stránky. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+    </section>
+
+    <!-- Sekce "article1" a "article2" -->
+    <div class="grid-container">
+        <section id="article1" class="article">
+            <h2>Article 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam commodo dui eget wisi. Aliquam ante. Vivamus luctus egestas leo. Nunc auctor. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Duis pulvinar. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam.</p>
+        </section>
+        <section id="" class="article-image">
+            <div class="gallery-trigger">
+                <div class="gallery-image-container">
+                    <img id="gallery-image-1" src="./assets/placeholder_1x1.png" alt="Gallery Image">
+                </div>
+                <div class="gallery-controls">
+                    <img class="gallery-icon" src="./assets/icons/angle-left.png" alt="Left Arrow" onclick="prevImage(1)">
+                    <img class="gallery-icon" src="./assets/icons/angle-right.png" alt="Right Arrow" onclick="nextImage(1)">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Sekce "article3" a "article4" -->
+    <div class="grid-container">
+        <section id="article3" class="article">
+            <h2>Article 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula ullamcorper metus, at efficitur leo.</p>
+        </section>
+        <section id="article4" class="article">
+            <h2>Article 4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula ullamcorper metus, at efficitur leo.</p>
+        </section>
+    </div>
+
+    <!-- Sekce "article5" a "article6" -->
+    <div class="grid-container">
+        <section class="article-image">
+            <img src="./assets/placeholder_1x1.png" alt="Image">
+        </section>
+        <section id="article5" class="article-image">
+            <div class="gallery-trigger">
+                <div class="gallery-image-container">
+                    <img id="gallery-image-2" src="./assets/placeholder_1x1_4.png" alt="Gallery Image">
+                </div>
+                <div class="gallery-controls">
+                    <img class="gallery-icon" src="./assets/icons/angle-left.png" alt="Left Arrow" onclick="prevImage(2)">
+                    <img class="gallery-icon" src="./assets/icons/angle-right.png" alt="Right Arrow" onclick="nextImage(2)">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Sekce "article7" a "article8" -->
+    <div class="grid-container">
+        <section id="article7" class="article">
+            <h2>Article 7</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam commodo dui eget wisi. Aliquam ante. Vivamus luctus egestas leo. Nunc auctor. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Duis pulvinar. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam.</p>
+        </section>
+        <section id="" class="article-image">
+            <div class="gallery-trigger">
+                <div class="gallery-image-container">
+                    <img id="gallery-image-3" src="./assets/placeholder_1x1_7.png" alt="Gallery Image">
+                </div>
+                <div class="gallery-controls">
+                    <img class="gallery-icon" src="./assets/icons/angle-left.png" alt="Left Arrow" onclick="prevImage(3)">
+                    <img class="gallery-icon" src="./assets/icons/angle-right.png" alt="Right Arrow" onclick="nextImage(3)">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Overlay -->
+    <div id="gallery-overlay" class="gallery-overlay">
+    <span class="close-overlay" onclick="closeOverlay()">
+        <img src="./assets/icons/cross.png" alt="Close">
+    </span>
+    <div class="overlay-content">
+        <img id="overlay-image" src="" alt="Gallery Image Full" style="width: 100%;">
+    </div>
+    <div class="gallery-controls-overlay">
+        <img class="gallery-icon" src="./assets/icons/angle-left.png" alt="Left Arrow" onclick="prevImage(currentGallery)">
+        <img class="gallery-icon" src="./assets/icons/angle-right.png" alt="Right Arrow" onclick="nextImage(currentGallery)">
+    </div>
+    </div>
+
+    <!-- Sekce "gallery9" -->
+    <div class="grid-container-wide">
+        <section class="article-image ">
+            <img src="./assets/placeholder_16x9_short.png" alt="Image">
+        </section>
+
+    <!-- Sekce "article10" a "article11" -->
+    <div class="grid-container">
+        <section id="article10" class="article">
+            <h2>Article 10</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula ullamcorper metus, at efficitur leo.</p>
+        </section>
+        <section id="article11" class="article">
+            <h2>Article 11</h2>
+            <p>Nullam at arcu a est sollicitudin euismod. In convallis. Sed convallis magna eu sem. Integer tempor. Aenean id metus id velit ullamcorper pulvinar. Etiam quis quam. Phasellus et lorem id felis nonummy placerat. Etiam egestas wisi a erat. Maecenas lorem. Fusce wisi.</p>
+        </section>
+    </div>
+
+     <!-- Sekce "kontaktni-formular" -->
+    <div class="grid-container-wide">
+        <section id="kontakty" class="kontakty-header">
+            <h2>Kontakty</h2>
+        </section>
+    </div>
+    <div class="grid-container">
+        <section id="Napise nám" class="article">
+            <h3>Napište nám</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        
+        </section>
+        <section id="kontaktni-formular" class="kontaktni-formular">
+                <h3>Nebo nám napište!</h3>
+                <form id="contact-form" action="mailto:xxx@mail.com" method="POST" onsubmit="return validateForm()" enctype="text/plain">
+                <label for="name">Jméno a příjmení*</label>
+                <input type="text" id="name" name="name" required placeholder="Vaše jméno a příjmení">
+        
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required placeholder="Váš email">
+        
+                <label for="phone">Telefonní číslo</label>
+                <input type="tel" id="phone" name="phone" placeholder="Váš telefon">
+
+                <label for="message">Text zprávy*</label>
+                <textarea id="message" name="message" required placeholder="Vaše zpráva" maxlength="1200"></textarea>
+                <label>* Povinna pole k vyplnění
+
+                </label>
+        
+                <button type="submit">Odeslat zprávu</button>
+        
+            </form>
+        </section>
+     </div>
+
+
+     <script src="script.js">
+
+     </script>
+
+
+</body>
+</html>
