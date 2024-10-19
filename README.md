@@ -1,6 +1,8 @@
 Garda page refresh
 
 zakladní info
+- Celá web page 100% responzivní na mobil
+- omezení obrázků pro mobil pro lepší uživatelskou zkušenost? 
 kombinace komponentů
 - wide = 100% šíře page
 - bežný komponent = 50% page, oddělený | pro přehlednost
