@@ -7,18 +7,18 @@ kombinace komponentů
 
 
 Vymšlená struktura:
-Navigace
-Main billboard
-H1 headline
-intro - wide
-Program/novinky? | Nabízíme
-Vystoupení 1 info | mini galerie - Rozbitá huba
-Vystoupení 2 info | mini galerie - Síň válečníků
-Vystoupení 3 info | mini galerie - Drakkar
-?? Vystoupení 4 info | mini galerie - volné souboje ??
-Wide copy/billboard - možná Točník > entry point na Točník subpage
-kontaky + entry point pro stánkaře subpage | Formulář 1
-footer
+- Navigace
+- Main billboard
+- H1 headline
+- intro - wide
+- Program/novinky? | Nabízíme
+- Vystoupení 1 info | mini galerie - Rozbitá huba
+- Vystoupení 2 info | mini galerie - Síň válečníků
+- Vystoupení 3 info | mini galerie - Drakkar
+- ?? Vystoupení 4 info | mini galerie - volné souboje ??
+- Wide copy/billboard - možná Točník > entry point na Točník subpage
+- kontaky + entry point pro stánkaře subpage | Formulář 1
+- footer
 
 Subpage
 - Stánkaři = infro, kontakt na žakuje a formulář 2 ?
