@@ -1,6 +1,9 @@
 Garda page refresh
 
 zakladní info
+- page bude 100% responsivní na mobil
+- zmenšit počet obrázků u mobilu pro rychlejší načítání?
+
 kombinace komponentů
 - wide = 100% šíře page
 - bežný komponent = 50% page, oddělený | pro přehlednost
@@ -32,3 +35,4 @@ K dořešení?
 3. odkaz na Kegleho :D
 4. cookies pop-up
 5. animace pro galerie
+6. border animace pro page jako u https://www.betteroregon.org/
