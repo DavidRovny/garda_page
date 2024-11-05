@@ -159,8 +159,11 @@ body {
     display: block;
     width: 100%;
     height: auto;
-    object-fit: cover; /* Zajistí, že obrázek vyplní celý prostor */
+    object-fit: cover;
+    /* transform: scale(0.7); /* Zmenší obrázek na 70 % */
+    /* transform-origin: center; /* Zajistí, že zmenšení bude z centra obrázku */
 }
+
 
 h1 {
     margin-top: 0;
@@ -169,7 +172,7 @@ h1 {
 h2 {
     margin-top: 0;
     font-family: Poppins-SemiBold;
-    font-size: 2.8rem;
+    font-size: 3rem;
 }
 
 p {
@@ -261,7 +264,7 @@ p {
 .kontaktni-formular h2, h3 {
     text-align: left;
     color: #fff;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: Poppins-SemiBold;
     margin-bottom: 20px;
 }
@@ -383,6 +386,66 @@ p {
 }
 
 
+
+/* Footer design */
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.514);
+    max-width: 1920px;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    margin: 0;
+    padding: 30px;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+}
+
+.footer section {
+    display: flex; /* Přidáno display: flex */
+    flex-direction: row; /* Uspořádání ikon vedle sebe */
+    gap: 20px; /* Mezera mezi ikonami */
+}
+
+.footer-icon {
+    display: flex;
+    margin: 15px;
+}
+
+.icon-background {
+    width: 48px; /* Velikost pozadí kolem ikony */
+    height: 48px;
+    background-color: #fff; /* Bílé pozadí */
+    border: 2px solid #333; /* Tmavší rámeček */
+    border-radius: 50%; /* Kulatý tvar pozadí */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.icon-background img {
+    width: 24px; /* Velikost samotné ikony */
+    height: 24px;
+}
+
+.footer-icon p {
+    color: #fff;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.vystoupeni-mobile {
+    display: none;
+}
+
+.vystoupeni-desktop {
+    display: grid;
+}
+
+
+
+
 /* Responsivní design */
 /* tablet */
 @media (max-width: 880px) {
@@ -431,6 +494,15 @@ p {
 @media (max-width: 600px) {
     .navbar {
         justify-content: space-between; /* Přepne zpět na space-between pro zobrazení tlačítka a menu */
+    }
+
+    .vystoupeni-desktop {
+        display: none;
+    }
+
+    .vystoupeni-mobile {
+        display: flex;
+        flex-direction: column;
     }
 
     .navbar-menu {
