@@ -1,5 +1,6 @@
 //GALERIE
 
+// Obrázky pro každou galerii
 var galleryImages = {
     1: [
         'assets/placeholder_1x1.png',
@@ -18,55 +19,94 @@ var galleryImages = {
     ]
 };
 
-var currentGallery = 1;
-var currentIndex = {
+// Proměnné pro aktuální galerii a index
+var currentGallery = null;
+var currentIndex = null;
+
+// Lokální indexy pro každou galerii na stránce
+var galleryIndexes = {
     1: 0,
     2: 0,
     3: 0
 };
 
-function showImage(galleryId, index) {
+// Funkce pro synchronizaci obrázků na stránce i v overlay
+function updateImages(galleryId, index) {
+    // Aktualizace obrázku na stránce
     var galleryImage = document.getElementById('gallery-image-' + galleryId);
-    var overlayImage = document.getElementById('overlay-image');
-    currentIndex[galleryId] = index;
+    galleryImage.src = galleryImages[galleryId][index];
 
-    galleryImage.src = galleryImages[galleryId][currentIndex[galleryId]];
-    overlayImage.src = galleryImages[galleryId][currentIndex[galleryId]];
-}
+    // Pokud je otevřený overlay, aktualizuj i obrázek v overlay
+    if (currentGallery === galleryId) {
+        var overlayImage = document.getElementById('overlay-image');
+        overlayImage.src = galleryImages[galleryId][index];
+    }
 
-function nextImage(galleryId) {
-    currentIndex[galleryId] = (currentIndex[galleryId] + 1) % galleryImages[galleryId].length;
-    showImage(galleryId, currentIndex[galleryId]);
-}
-
-function prevImage(galleryId) {
-    currentIndex[galleryId] = (currentIndex[galleryId] - 1 + galleryImages[galleryId].length) % galleryImages[galleryId].length;
-    showImage(galleryId, currentIndex[galleryId]);
-}
-
-function openOverlay(galleryId) {
+    // Aktualizace indexů
+    galleryIndexes[galleryId] = index;
     currentGallery = galleryId;
+    currentIndex = index;
+}
+
+// Přepnutí na další obrázek
+function nextImage(galleryId) {
+    var gallery = galleryId || currentGallery;
+    if (gallery !== null) {
+        var nextIndex = (galleryIndexes[gallery] + 1) % galleryImages[gallery].length;
+        updateImages(gallery, nextIndex);
+    }
+}
+
+// Přepnutí na předchozí obrázek
+function prevImage(galleryId) {
+    var gallery = galleryId || currentGallery;
+    if (gallery !== null) {
+        var prevIndex = (galleryIndexes[gallery] - 1 + galleryImages[gallery].length) % galleryImages[gallery].length;
+        updateImages(gallery, prevIndex);
+    }
+}
+
+// Otevření overlaye
+function openOverlay(galleryId, index) {
     var overlay = document.getElementById('gallery-overlay');
     overlay.style.display = 'flex';
-    showImage(galleryId, currentIndex[galleryId]);
+
+    // Inicializace indexu, pokud nebyl nastaven
+    if (galleryIndexes[galleryId] === undefined) {
+        galleryIndexes[galleryId] = index;
+    }
+
+    // Nastavení aktuální galerie a indexu
+    currentGallery = galleryId;
+    currentIndex = index;
+
+    // Zobrazení aktuálního obrázku v overlay
+    var overlayImage = document.getElementById('overlay-image');
+    overlayImage.src = galleryImages[galleryId][index];
 }
 
+// Zavření overlaye
 function closeOverlay() {
     var overlay = document.getElementById('gallery-overlay');
     overlay.style.display = 'none';
+    currentGallery = null;
+    currentIndex = null;
 }
 
-// Zavření overlaye při kliknutí mimo
-document.getElementById('gallery-overlay').addEventListener('click', function(event) {
+// Zavření overlaye při kliknutí mimo něj
+document.getElementById('gallery-overlay').addEventListener('click', function (event) {
     if (event.target === this) {
         closeOverlay();
     }
 });
 
-// Otevření overlay po kliknutí na obrázek v galerii
-document.querySelectorAll('.gallery-image-container img').forEach(function (img, index) {
+// Přidání událostí kliknutí na obrázky v galerii
+document.querySelectorAll('.gallery-image-container img').forEach(function (img) {
     img.addEventListener('click', function () {
-        openOverlay(index + 1);
+        var galleryId = img.id.split('-')[2]; // Extrahování ID galerie z ID obrázku
+        var src = img.src.split('/').pop(); // Získání aktuálního obrázku
+        var index = galleryImages[galleryId].indexOf('assets/' + src); // Získání indexu
+        openOverlay(parseInt(galleryId), index);
     });
 });
 
@@ -119,5 +159,4 @@ function validateForm() {
 
     return true;
 };
-
 
