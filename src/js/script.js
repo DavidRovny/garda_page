@@ -5,17 +5,20 @@ var galleryImages = {
     1: [
         'assets/placeholder_1x1.png',
         'assets/placeholder_1x1_2.png',
-        'assets/placeholder_1x1_3.png'
+        'assets/placeholder_1x1_3.png',
+        'assets/placeholder_1x1_4.png'
     ],
     2: [
-        'assets/placeholder_1x1_4.png',
-        'assets/placeholder_1x1_5.png',
-        'assets/placeholder_1x1_6.png'
+        'assets/drakkar/drakkar_01.jpg',
+        'assets/drakkar/drakkar_02.jpg',
+        'assets/drakkar/drakkar_03.jpg',
+        'assets/drakkar/drakkar_04.jpg'
     ],
     3: [
-        'assets/placeholder_1x1_7.png',
-        'assets/placeholder_1x1_8.png',
-        'assets/placeholder_1x1_9.png'
+        'assets/sin/sin_1.jpg',
+        'assets/sin/sin_2.jpg',
+        'assets/sin/sin_3.jpg',
+        'assets/sin/sin_4.jpg'
     ]
 };
 
@@ -104,9 +107,17 @@ document.getElementById('gallery-overlay').addEventListener('click', function (e
 document.querySelectorAll('.gallery-image-container img').forEach(function (img) {
     img.addEventListener('click', function () {
         var galleryId = img.id.split('-')[2]; // Extrahování ID galerie z ID obrázku
-        var src = img.src.split('/').pop(); // Získání aktuálního obrázku
-        var index = galleryImages[galleryId].indexOf('assets/' + src); // Získání indexu
-        openOverlay(parseInt(galleryId), index);
+        var src = img.src; // Celá cesta k obrázku
+        var index = galleryImages[galleryId].findIndex((imagePath) => {
+            // Porovnáváme celé cesty
+            return src.includes(imagePath);
+        });
+
+        if (index !== -1) {
+            openOverlay(parseInt(galleryId), index);
+        } else {
+            console.error("Obrázek nebyl nalezen v poli galleryImages.");
+        }
     });
 });
 

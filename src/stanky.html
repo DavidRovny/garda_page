@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Garda Page - Stánky</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigace -->
+        <nav class="navbar-stanek">
+            <ul id="navbar-menu" class="navbar-menu-stanek">
+                <li><a href="homepage.html">Zpět na hlavní stránku</a></li>
+            </ul>
+        </nav>
+
+    <!-- Sekce "intro" -->
+    <div class="grid-container-wide">
+        <section  class="intro">
+            <h1>Info pro stánkaře</h1>
+            <p>Toto je úvodní sekce stránky. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+        </section>
+    </div>
+
+    
+
+     <!-- Sekce "kontaktni-formular-stanky" -->
+    <div class="grid-container">
+        <section id="Napise nám" class="article">
+            <h3>Potřebuju si o tom promluvit</h3>
+            <div class="kontakty-box">
+            <div class="portret-profile">
+                <div class="portret-background">
+                    <img src="assets/icons/pine-cone_black.png" alt="Facebook">
+                </div>
+                <p>Bude tady Žakuj?</p>
+            </div>
+            <div>
+                <p>Otrok skupiny</p>
+                <p>telefon</p>
+                <p>email</p>    
+            </div>
+
+        
+        </section>
+        <section id="kontaktni-formular" class="kontaktni-formular">
+                <h3>Mám stánek a chci přijet</h3>
+                <form id="contact-form" action="mailto:xxx@mail.com" method="POST" onsubmit="return validateForm()" enctype="text/plain">
+                <label for="name">Jméno a příjmení*</label>
+                <input type="text" id="name" name="name" required placeholder="Vaše jméno a příjmení">
+        
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required placeholder="Váš email">
+
+                <label for="stanek">Druh stánku včetně rozmerů (1x2m a pod)*</label>
+                <textarea id="stanek" name="stanek" required placeholder="Popis stánku" maxlength="1200"></textarea>
+        
+                <label for="phone">Telefonní číslo</label>
+                <input type="tel" id="phone" name="phone" placeholder="Váš telefon">
+
+                <label for="message">Text zprávy*</label>
+                <textarea id="message" name="message" required placeholder="Vaše zpráva" maxlength="1200"></textarea>
+                <label>* Povinna pole k vyplnění
+
+                </label>
+        
+                <button type="submit">Odeslat formulář</button>
+        
+            </form>
+        </section>
+     </div>
+
+    <!-- Sekce "footer" -->
+    <div class="footer">
+        <section id="footer" >
+            <div class="footer-icon">
+                <div class="icon-background">
+                    <img src="assets/icons/facebook_original.png" alt="Facebook">
+                </div>
+            </div>
+            <div class="footer-icon">
+                <div class="icon-background">
+                    <img src="assets/icons/youtube_original.png" alt="Youtube">
+                </div>
+            </div>
+            <div class="footer-icon">
+                <div class="icon-background">
+                    <img src="assets/icons/pine-cone_original.png" alt="John Kegle">
+                </div>
+            </div>
+            
+        </section>
+    </div>
+
+
+     <script src="js/script-stanky.js">
+
+     </script>
+
+
+</body>
+</html>

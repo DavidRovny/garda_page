@@ -44,7 +44,7 @@ body {
     width: 100%;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.425);
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
 /* Navigace */
@@ -111,6 +111,54 @@ body {
     border-radius: 1px;
 }
 
+.navbar-menu-stanek {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    left: 0;
+    z-index: 999;
+}
+
+.navbar-stanek {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-menu-stanek li {
+    margin: 0 15px;
+    padding: 5px 0; 
+}
+
+.navbar-menu-stanek li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 16px;
+}
+
+.navbar-menu-stanek li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.navbar-menu-stanek li a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.navbar-menu-stanek li a:active {
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 4px;
+}
+
+
 /* Grid Container */
 .grid-container {
     max-width: 1920px;
@@ -126,7 +174,8 @@ body {
     grid-template-columns: 1fr;
     gap: 0;
     margin: 0;
-}
+    background-color: rgba(0, 0, 0, 0.15);
+   }
 
 .article {
     padding: 30px;
@@ -185,7 +234,8 @@ h3 {
 p {
     color: #fff;
     font-weight: 400;
-    font-size: normal;
+    font-size: 1.2rem;
+    line-height: 150%;
 }
 
 /* Billboard */
@@ -325,6 +375,32 @@ p {
     background-color: #e67343;
 }
 
+.kontakty-box {
+    margin-left: 40px;
+}
+
+
+.portret-profile {
+    display: flex; 
+    flex-direction: row; 
+    gap: 20px; 
+    margin-right: 40px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.portret-background img {
+    width: 100px; 
+    height: 100px;
+    background-color: #fff; /* Bílé pozadí */
+    border: 2px solid #fff; /* Tmavší rámeček */
+    border-radius: 50%; /* Kulatý tvar pozadí */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
 
 /* Styl pro galerii */
 .gallery-trigger {
@@ -446,6 +522,10 @@ p {
     display: none;
 }
 
+.vystoupeni-tablet {
+    display: none;
+}
+
 .vystoupeni-desktop {
     display: block;
 }
@@ -461,6 +541,18 @@ p {
         grid-template-columns: 1fr;
     }
     .desktop-image {
+        display: none;
+    }
+
+    .vystoupeni-tablet {
+        display: block;
+    }
+
+    .vystoupeni-mobile {
+        display: none;
+    }
+
+    .vystoupeni-desktop {
         display: none;
     }
 
@@ -503,7 +595,17 @@ p {
         justify-content: space-between; /* Přepne zpět na space-between pro zobrazení tlačítka a menu */
     }
 
+    h2 {
+        margin-top: 0;
+        font-family: Poppins-SemiBold;
+        font-size: 3rem;
+    }
+
     .vystoupeni-desktop {
+        display: none;
+    }
+
+    .vystoupeni-tablet {
         display: none;
     }
 
@@ -544,7 +646,8 @@ p {
         background-color: #fff;
         border-radius: 1px;
     }
-    
+
+   
     .grid-container {
         grid-template-columns: 1fr;
     }
