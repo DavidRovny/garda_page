@@ -30,7 +30,7 @@
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0.425);
+    background-color: rgba(0, 0, 0, 0.425); /* alternativa rgb(158, 119, 119) nebo rgb(150, 126, 118) */
     color: #fff;
     margin: 0;
     font-family:Roboto, Poppins, Poppins-SemiBold, serif, Arial, Helvetica, sans-serif;
@@ -44,7 +44,7 @@ body {
     width: 100%;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 /* Navigace */
@@ -158,6 +158,12 @@ body {
     border-radius: 4px;
 }
 
+.anchor {
+    position: relative;
+    display: block;
+    margin-top: -60px; /* Výška navigace */
+    padding-top: 60px; /* Kompenzace pro margin */
+}
 
 /* Grid Container */
 .grid-container {
@@ -174,7 +180,7 @@ body {
     grid-template-columns: 1fr;
     gap: 0;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.25);
    }
 
 .article {
@@ -375,10 +381,9 @@ p {
     background-color: #e67343;
 }
 
-.kontakty-box {
-   /* margin-left: 40px; */
-}
-
+/* .kontakty-box {
+    margin-left: 40px; 
+} */
 
 .portret-profile {
     display: flex; 
