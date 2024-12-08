@@ -30,7 +30,7 @@
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0.425); /* alternativa rgb(158, 119, 119) nebo rgb(150, 126, 118) */
+    background-color: rgb(74, 63, 53);
     color: #fff;
     margin: 0;
     font-family:Roboto, Poppins, Poppins-SemiBold, serif, Arial, Helvetica, sans-serif;
@@ -299,8 +299,8 @@ p {
 }
 
 .kontaktni-formular button {
-    background-color: #f48251;
-    color: white;
+    background-color: #FA7D09;
+    color: black;
     border: none;
     padding: 15px;
     text-align: center;
@@ -312,13 +312,81 @@ p {
     border-radius: 4px;
 }
 
-.kontaktni-formular button:hover {
-    background-color: #e67343;
+.kontaktni-formular p {
+    color: black;
 }
 
-/* .kontakty-box {
-    margin-left: 40px; 
-} */
+.kontaktni-formular button:hover {
+    background-color: #FF4301;
+}
+
+input:focus {
+    border-color: #FA7D09; /* Zvýraznění při zaostření */
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #FA7D09; /* Zvýraznění při zaostření */
+    outline: none;
+}
+
+form select {
+    width: 90%; 
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+}
+
+form select:focus {
+    border-color: #FA7D09; /* Zvýraznění při zaostření */
+    outline: none;
+}
+
+/* Základní styl pro overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Skryté ve výchozím stavu */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Obsah pop-up okna */
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Tlačítko */
+.popup-content button {
+    background-color: #FA7D09;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.popup-content button:hover {
+    background-color: #FF4301;
+}
 
 .portret-profile {
     display: flex; 
@@ -516,16 +584,28 @@ p {
         
     }
 
-.kontaktni-formular input, 
-.kontaktni-formular textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-}
+    .kontaktni-formular input, 
+    .kontaktni-formular textarea {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    form select {
+        width: 100%; 
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        color: black;
+        box-sizing: border-box;
+    }
     
 }
 
@@ -591,7 +671,19 @@ p {
     font-size: 16px;
     width: 100%;
     box-sizing: border-box;
-}
+    }
+
+    form select {
+        width: 100%; 
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        color: black;
+        box-sizing: border-box;
+    }
 
 }
 

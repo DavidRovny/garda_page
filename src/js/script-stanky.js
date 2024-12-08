@@ -31,3 +31,31 @@ function validateForm() {
     return true;
 };
 
+// Funkce pro zobrazení úspěšného pop-upu
+function showSuccessPopup() {
+    document.getElementById('popup-success').style.display = 'flex';
+}
+
+// Funkce pro zobrazení pop-upu s chybou
+function showErrorPopup() {
+    document.getElementById('popup-error').style.display = 'flex';
+}
+
+// Přesměrování na hlavní stránku
+function redirectToHomepage() {
+    window.location.href = 'homepage.html'; // Změňte na správnou URL
+}
+
+// Simulace odeslání formuláře
+function handleSubmit(event) {
+    event.preventDefault(); // Zabraňte výchozímu odeslání formuláře
+
+    // Simulace výsledku odeslání
+    const success = Math.random() > 0.5; // Simulace úspěchu nebo chyby (pouze pro ukázku)
+    
+    if (success) {
+        showSuccessPopup();
+    } else {
+        showErrorPopup();
+    }
+}

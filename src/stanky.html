@@ -47,9 +47,15 @@
         </section>
         <section id="kontaktni-formular" class="kontaktni-formular">
                 <h3>Mám stánek a chci přijet</h3>
-                <form id="contact-form" action="mailto:davidrovny@mail.com" method="POST" onsubmit="return validateForm()" enctype="text/plain">
+                <form id="contact-form" action="mailto:xxx@mail.com" method="POST" onsubmit="return validateForm()" enctype="text/plain">
                 <label for="name">Jméno a příjmení*</label>
                 <input type="text" id="name" name="name" required placeholder="Vaše jméno a příjmení">
+
+                <label for="dropdown">Akce kam chci přijet*</label>
+                <select id="dropdown" name="dropdown" required>
+                    <option value="TBA 1" selected>Točník</option>
+                <!--<option value="TBA 2">TBA 2</option> --> 
+                </select>
 
                 <label for="stanek">Druh stánku včetně rozmerů (1x2m a pod)*</label>
                 <textarea id="stanek" name="stanek" required placeholder="Popis stánku" maxlength="1200"></textarea>  

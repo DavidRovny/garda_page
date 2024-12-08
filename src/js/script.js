@@ -1,5 +1,4 @@
 //GALERIE
-
 // Obrázky pro každou galerii
 var galleryImages = {
     1: [
@@ -35,17 +34,21 @@ var galleryIndexes = {
 
 // Funkce pro synchronizaci obrázků na stránce i v overlay
 function updateImages(galleryId, index) {
-    // Aktualizace obrázku na stránce
+    console.log("updateImages called for gallery:", galleryId, "with index:", index);
     var galleryImage = document.getElementById('gallery-image-' + galleryId);
-    galleryImage.src = galleryImages[galleryId][index];
+    if (galleryImage) {
+        galleryImage.src = galleryImages[galleryId][index];
+        console.log("Updated gallery image on page to:", galleryImages[galleryId][index]);
+    } else {
+        console.error("Gallery image element not found for ID:", galleryId);
+    }
 
-    // Pokud je otevřený overlay, aktualizuj i obrázek v overlay
     if (currentGallery === galleryId) {
         var overlayImage = document.getElementById('overlay-image');
         overlayImage.src = galleryImages[galleryId][index];
+        console.log("Updated overlay image to:", galleryImages[galleryId][index]);
     }
 
-    // Aktualizace indexů
     galleryIndexes[galleryId] = index;
     currentGallery = galleryId;
     currentIndex = index;
@@ -53,18 +56,22 @@ function updateImages(galleryId, index) {
 
 // Přepnutí na další obrázek
 function nextImage(galleryId) {
+    console.log("nextImage called for gallery:", galleryId);
     var gallery = galleryId || currentGallery;
     if (gallery !== null) {
         var nextIndex = (galleryIndexes[gallery] + 1) % galleryImages[gallery].length;
+        console.log("Next index:", nextIndex);
         updateImages(gallery, nextIndex);
     }
 }
 
 // Přepnutí na předchozí obrázek
 function prevImage(galleryId) {
+    console.log("prevImage called for gallery:", galleryId);
     var gallery = galleryId || currentGallery;
     if (gallery !== null) {
         var prevIndex = (galleryIndexes[gallery] - 1 + galleryImages[gallery].length) % galleryImages[gallery].length;
+        console.log("Previous index:", prevIndex);
         updateImages(gallery, prevIndex);
     }
 }
@@ -171,3 +178,31 @@ function validateForm() {
     return true;
 };
 
+// Funkce pro zobrazení úspěšného pop-upu
+function showSuccessPopup() {
+    document.getElementById('popup-success').style.display = 'flex';
+}
+
+// Funkce pro zobrazení pop-upu s chybou
+function showErrorPopup() {
+    document.getElementById('popup-error').style.display = 'flex';
+}
+
+// Přesměrování na hlavní stránku
+function redirectToHomepage() {
+    window.location.href = 'homepage.html'; // Změňte na správnou URL
+}
+
+// Simulace odeslání formuláře
+function handleSubmit(event) {
+    event.preventDefault(); // Zabraňte výchozímu odeslání formuláře
+
+    // Simulace výsledku odeslání
+    const success = Math.random() > 0.5; // Simulace úspěchu nebo chyby (pouze pro ukázku)
+    
+    if (success) {
+        showSuccessPopup();
+    } else {
+        showErrorPopup();
+    }
+}
