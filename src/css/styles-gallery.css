@@ -109,6 +109,22 @@ body {
     margin: 0;
 }
 
+.grid-container-triple {
+    max-width: 1920px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    margin: 0;
+}
+
+.grid-container-quatro {
+    max-width: 1920px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0;
+    margin: 0;
+}
+
 .grid-container-wide {
     max-width: 1920px;
     display: grid;
@@ -230,7 +246,7 @@ p {
 .billboard h1 {
     position: absolute;
     top: 66%;
-    font-size: 8vw; /* Škálovatelná velikost pro větší displeje */
+    font-size: 6vw; /* Škálovatelná velikost pro větší displeje */
     color: #fff;
     font-family: Poppins, sans-serif;
     text-align: center;
@@ -246,147 +262,6 @@ p {
     text-align: center;
 }
 
-.kontaktni-formular {
-   /* border: 2px solid #fff; */
-    padding: 30px;
-    width: auto;
-    text-align: left;
-}
-
-.kontakty-header h2 {
-    text-align: center;
-    color: #fff;
-    margin-bottom: 8px;
-}
-
-.kontaktni-formular h3 {
-    text-align: left;
-    color: #fff;
-    font-size: 2.5rem;
-    font-family: Poppins-SemiBold, sans-serif;
-    margin-bottom: 20px;
-}
-
-.kontaktni-formular form {
-    display: flex;
-    flex-direction: column;
-}
-
-.kontaktni-formular label {
-    color: #fff;
-    margin-bottom: 8px;
-}
-
-.kontaktni-formular input, 
-.kontaktni-formular textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    width: 90%;
-    box-sizing: border-box;
-}
-
-.kontaktni-formular-pravo {
-    position: absolute;
-    
-}
-
-.kontaktni-formular textarea {
-    height: 100px;
-    resize: vertical; /* Umožní zvětšování výšky podle obsahu */
-}
-
-.kontaktni-formular button {
-    background-color: #FA7D09;
-    color: black;
-    border: none;
-    padding: 15px;
-    text-align: center;
-    font-size: 18px;
-    cursor: pointer;
-    margin: 0 auto;
-    margin-top: 12px;
-    display: block;
-    border-radius: 4px;
-}
-
-.kontaktni-formular p {
-    color: black;
-}
-
-.kontaktni-formular button:hover {
-    background-color: #FF4301;
-}
-
-input:focus {
-    border-color: #FA7D09; /* Zvýraznění při zaostření */
-    outline: none;
-}
-
-textarea:focus {
-    border-color: #FA7D09; /* Zvýraznění při zaostření */
-    outline: none;
-}
-
-form select {
-    width: 90%; 
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    color: black;
-    box-sizing: border-box;
-}
-
-form select:focus {
-    border-color: #FA7D09; /* Zvýraznění při zaostření */
-    outline: none;
-}
-
-/* Základní styl pro overlay */
-.popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none; /* Skryté ve výchozím stavu */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-/* Obsah pop-up okna */
-.popup-content {
-    background-color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 90%;
-}
-
-/* Tlačítko */
-.popup-content button {
-    background-color: #FA7D09;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-top: 15px;
-}
-
-.popup-content button:hover {
-    background-color: #FF4301;
-}
 
 .portret-profile {
     display: flex; 
@@ -477,6 +352,46 @@ form select:focus {
 }
 
 
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Nastavte maximální šířku podle designu */
+    margin: 30px auto; /* Centrovat na stránce */
+    overflow: hidden;
+    border-radius: 8px; /* Volitelně zaoblené rohy */
+    
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 450px; /* Nastavte výšku podle designu */
+    border: none;
+}
+
+#youtube-video {
+    width: 100%;
+    height: 450px;
+}
+
+.video-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #f48251;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.video-button:hover {
+    background-color: #e67343;
+}
+
+
+
 
 /* Footer design */
 
@@ -548,6 +463,15 @@ form select:focus {
     .grid-container {
         grid-template-columns: 1fr;
     }
+
+    .grid-container-triple {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-container-quatro {
+        grid-template-columns: 1fr;
+    }
+
     .desktop-image {
         display: none;
     }
@@ -584,30 +508,6 @@ form select:focus {
         
     }
 
-    .kontaktni-formular input, 
-    .kontaktni-formular textarea {
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    form select {
-        width: 100%; 
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        background-color: white;
-        color: black;
-        box-sizing: border-box;
-    }
-    
-}
 
 /* mobile */
 @media (max-width: 600px) {
@@ -633,6 +533,14 @@ form select:focus {
 
    
     .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-container-triple {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-container-quatro {
         grid-template-columns: 1fr;
     }
 
@@ -662,28 +570,6 @@ form select:focus {
         
     }
 
-    .kontaktni-formular input, 
-    .kontaktni-formular textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-    }
-
-    form select {
-        width: 100%; 
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        background-color: white;
-        color: black;
-        box-sizing: border-box;
-    }
 
 }
 
@@ -699,3 +585,7 @@ form select:focus {
         z-index: 2;
     }
 }
+}
+
+
+
