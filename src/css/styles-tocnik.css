@@ -418,8 +418,6 @@ p {
 }
 
 .footer section {
-    display: flex; /* Přidáno display: flex */
-    flex-direction: row; /* Uspořádání ikon vedle sebe */
     gap: 20px; /* Mezera mezi ikonami */
 }
 
@@ -451,15 +449,12 @@ p {
     font-size: 14px;
 }
 
-.vystoupeni-mobile {
+.view-on-mobile {
     display: none;
 }
 
-.vystoupeni-tablet {
-    display: none;
-}
 
-.vystoupeni-desktop {
+.view-on-desktop {
     display: block;
 }
 
@@ -486,15 +481,11 @@ p {
         display: none;
     }
 
-    .vystoupeni-tablet {
+    .view-on-mobile {
         display: block;
     }
 
-    .vystoupeni-mobile {
-        display: none;
-    }
-
-    .vystoupeni-desktop {
+    .view-on-desktop {
         display: none;
     }
 
@@ -528,15 +519,11 @@ p {
         font-size: 3rem;
     }
 
-    .vystoupeni-desktop {
+    .view-on-desktop {
         display: none;
     }
 
-    .vystoupeni-tablet {
-        display: none;
-    }
-
-    .vystoupeni-mobile {
+    .view-on-mobile {
         display: flex;
         flex-direction: column;
     }
@@ -579,8 +566,6 @@ p {
         z-index: 2;
         
     }
-
-
 }
 
 @media (min-width: 2048px) {
