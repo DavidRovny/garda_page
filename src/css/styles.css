@@ -191,6 +191,7 @@ body {
 
 .article p {
     text-align: left;
+    
 }
 
 .article li {
@@ -802,8 +803,7 @@ p {
     }
 
     .vystoupeni-mobile {
-        display: flex;
-        flex-direction: column;
+        display: block;
     }
 
     .navbar-menu {
