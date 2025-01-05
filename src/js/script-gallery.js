@@ -1,15 +1,22 @@
 // Obrázky pro každou galerii
 var galleryImages = {
     1: [
-        'assets/placeholder_1x1.png',
-        'assets/placeholder_1x1_2.png',
-        'assets/placeholder_1x1_3.png',
-        'assets/placeholder_1x1_4.png',
-        'assets/placeholder_1x1_5.png',
-        'assets/placeholder_1x1_6.png',
-        'assets/placeholder_1x1_7.png',
-        'assets/placeholder_1x1_8.png',
-        'assets/placeholder_1x1_9.png'
+        'assets/gallery_main/gallery_01.jpg',
+        'assets/gallery_main/gallery_02.jpg',
+        'assets/gallery_main/gallery_03.jpg',
+        'assets/gallery_main/gallery_04.jpg',
+        'assets/gallery_main/gallery_05.jpg',
+        'assets/gallery_main/gallery_06.jpg',
+        'assets/gallery_main/gallery_07.jpg',
+        'assets/gallery_main/gallery_08.jpg',
+        'assets/gallery_main/gallery_09.jpg',
+        'assets/gallery_main/gallery_10.jpg',
+        'assets/gallery_main/gallery_11.jpg',
+        'assets/gallery_main/gallery_12.jpg',
+        'assets/gallery_main/gallery_13.jpg',
+        'assets/gallery_main/gallery_14.jpg',
+        'assets/gallery_main/gallery_15.jpg',
+        'assets/gallery_main/gallery_16.jpg'
     ],
 };
 
