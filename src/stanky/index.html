@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okořská Garda - Stánky</title>
+    <meta name="og:url" content="https://www.garda.cz/stanky"/>
+    <meta name="og:type" content="website"/>
+    <meta name="og:title" content="Okořská Garda | Stánky"/> 
+    <meta name="og:description" content="Okořská Garda | Informace a kontakt pro stánkaře. Kontaktní formulář."/>
+    <link rel="stylesheet" href="css/styles-stanky.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigace -->
+        <nav class="navbar">
+            <ul id="navbar-menu" class="navbar-menu">
+                <li><a href="/homepage.html#kontakty">Zpět na hlavní stránku</a></li>
+            </ul>
+        </nav>
+
+    <!-- Sekce "intro" -->
+    <div class="grid-container-wide">
+        <section  class="intro">
+            <h1>Info pro stánkaře</h1>
+            <p>Toto je úvodní sekce stránky. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+        </section>
+    </div>
+
+    
+
+     <!-- Sekce "kontaktni-formular-stanky" -->
+    <div class="grid-container">
+        <section id="Napise nám" class="article">
+            <h3>Potřebuju si o tom promluvit</h3>
+            <div class="kontakty-box">
+            <div class="portret-profile">
+                <div class="portret-background">
+                    <img src="/assets/icons/pine-cone_black.png" alt="Facebook">
+                </div>
+                <p>Bude tady Žakuj?</p>
+            </div>
+            <div>
+                <p>Otrok skupiny</p>
+                <p>telefon</p>
+                <p>email</p>    
+            </div>
+
+        
+        </section>
+        <section id="kontaktni-formular" class="kontaktni-formular">
+                <h3>Mám stánek a chci přijet</h3>
+                <form id="contact-form" action="form-to-email-stanky.php" method="POST" onsubmit="return validateForm()" enctype="application/x-www-form-urlencoded">
+                <label for="name">Jméno a příjmení*</label>
+                <input type="text" id="name" name="name" required placeholder="Vaše jméno a příjmení">
+
+                <label for="dropdown">Akce kam chci přijet*</label>
+                <select id="dropdown" name="dropdown" required>
+                    <option value="TBA 1" selected>Točník</option>
+                <!--<option value="TBA 2">TBA 2</option> --> 
+                </select>
+
+                <label for="stanek">Druh stánku včetně rozmerů (1x2m a pod)*</label>
+                <textarea id="stanek" name="stanek" required placeholder="Popis stánku" maxlength="1200"></textarea>  
+
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required placeholder="Váš email">
+        
+                <label for="phone">Telefonní číslo</label>
+                <input type="tel" id="phone" name="phone" placeholder="Váš telefon">
+
+                <label for="message">Text zprávy</label>
+                <textarea id="message" name="message" placeholder="Vaše zpráva" maxlength="1200"></textarea>
+                <label>* Povinna pole k vyplnění
+
+                </label>
+        
+                <button type="submit">Odeslat formulář</button>
+        
+            </form>
+        </section>
+     </div>
+
+    
+
+     <script src="js/script-stanky.js">
+
+     </script>
+
+
+</body>
+</html>
