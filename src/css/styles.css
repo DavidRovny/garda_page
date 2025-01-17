@@ -251,6 +251,13 @@ h2 {
     font-size: 4.2rem;
 }
 
+.h2-no-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: Poppins-SemiBold, sans-serif;
+    font-size: 4.2rem;
+}
+
 h3 {
     margin-top: 0;
     font-family: Poppins-SemiBold, sans-serif;
@@ -782,6 +789,13 @@ p {
 
     h2 {
         margin-top: 0;
+        font-family: Poppins-SemiBold, sans-serif;
+        font-size: 3rem;
+    }
+
+    .h2-no-margin {
+        margin-top: 0;
+        margin-bottom: 0;
         font-family: Poppins-SemiBold, sans-serif;
         font-size: 3rem;
     }

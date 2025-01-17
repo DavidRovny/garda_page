@@ -355,7 +355,7 @@ p {
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 800px; /* Nastavte maximální šířku podle designu */
+    max-width: 1080px; /* Nastavte maximální šířku podle designu */
     margin: 30px auto; /* Centrovat na stránce */
     overflow: hidden;
     border-radius: 8px; /* Volitelně zaoblené rohy */
@@ -364,13 +364,13 @@ p {
 
 .video-container iframe {
     width: 100%;
-    height: 450px; /* Nastavte výšku podle designu */
+    height: 720px; /* Nastavte výšku podle designu */
     border: none;
 }
 
 #youtube-video {
     width: 100%;
-    height: 450px;
+    height: 720px;
 }
 
 .video-button {
