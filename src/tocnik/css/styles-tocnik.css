@@ -247,20 +247,34 @@ p {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 33%;
+    height: 50%;
     background-color: rgba(0, 0, 0, 0.425);
+    display: flex;
+    flex-direction: column;
     /* height: 100%;
     background: linear-gradient(#00000000, #000000dc); */
 }
 
 .billboard h1 {
     position: absolute;
-    top: 66%;
+    top: 55%;
     font-size: 6vw; /* Škálovatelná velikost pro větší displeje */
     color: #fff;
     font-family: Poppins, sans-serif;
     text-align: center;
     text-wrap: nowrap;
+    z-index: 2;
+    
+}
+
+.billboard h2 {
+    position: absolute;
+    top: 75%;
+    font-size: 4vw; /* Škálovatelná velikost pro větší displeje */
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    text-wrap: wrap;
     z-index: 2;
     
 }
@@ -499,7 +513,7 @@ p {
 
     .billboard h1 {
         position: absolute;
-        top: 75%;
+        top: 55%;
         font-size: 10vw; /* Škálovatelná velikost pro větší displeje */
         color: #fff;
         font-family: Poppins, sans-serif;
@@ -508,6 +522,17 @@ p {
         z-index: 2;
         
     }
+
+    .billboard h2 {
+        position: absolute;
+        top: 75%;
+        font-size: 6vw;
+        color: #fff;
+        font-family: Poppins, sans-serif;
+        text-align: center;
+        text-wrap: nowrap;
+        z-index: 2;
+    }    
 
 
 /* mobile */
@@ -557,7 +582,7 @@ p {
 
     .billboard h1 {
         position: absolute;
-        top: 70%;
+        top: 55%;
         font-size: 12vw; /* Škálovatelná velikost pro větší displeje */
         color: #fff;
         font-family: Poppins, sans-serif;
@@ -566,12 +591,24 @@ p {
         z-index: 2;
         
     }
+
+    .billboard h2 {
+        position: absolute;
+        top: 70%;
+        font-size: 10vw;
+        color: #fff;
+        font-family: Poppins, sans-serif;
+        text-align: center;
+        text-wrap: nowrap;
+        z-index: 2;
+      }
+
 }
 
 @media (min-width: 2048px) {
     .billboard h1 {
         position: absolute;
-        top: 65%;
+        top: 50%;
         font-size: 7vw; /* Škálovatelná velikost pro větší displeje */
         color: #fff;
         font-family: Poppins, sans-serif;
@@ -579,7 +616,23 @@ p {
         text-wrap: nowrap;
         z-index: 2;
     }
+
+    .billboard h2 {
+        position: absolute;
+        top: 75%;
+        font-size: 4vw; /* Škálovatelná velikost pro větší displeje */
+        color: #fff;
+        font-family: Poppins, sans-serif;
+        text-align: center;
+        text-wrap: wrap;
+        z-index: 2;
+        
+    }
+
+    
 }
+
+
 }
 
 
