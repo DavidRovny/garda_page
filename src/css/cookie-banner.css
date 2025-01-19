@@ -11,7 +11,7 @@
     z-index: 1000;
     box-sizing: border-box; 
     overflow: hidden; 
-    display: none; /* Skryté, dokud není zobrazeno přes JS */
+   /* display: none; /* Skryté, dokud není zobrazeno přes JS */
 }
 
 .cookie-banner p {

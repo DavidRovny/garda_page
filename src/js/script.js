@@ -128,6 +128,61 @@ document.querySelectorAll('.gallery-image-container img').forEach(function (img)
     });
 });
 
+// VIDEO
+document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("my-video");
+    const playPauseBtn = document.getElementById("play-pause-btn");
+    const playPauseIcon = document.getElementById("play-pause-icon");
+    let isAutoplayTriggered = false;
+    let isManuallyPaused = false;
+
+    // Toggle play/pause logic
+    function togglePlayPause() {
+        if (video.paused || video.ended) {
+            video.play();
+            isManuallyPaused = false; // Reset manual pause
+            playPauseIcon.className = "fas fa-pause"; // Change to pause icon
+        } else {
+            video.pause();
+            isManuallyPaused = true; // Set manual pause
+            playPauseIcon.className = "fas fa-play"; // Change to play icon
+        }
+    }
+
+    // Play/Pause button functionality
+    playPauseBtn.addEventListener("click", togglePlayPause);
+
+    // Click-to-Toggle on Video
+    video.addEventListener("click", togglePlayPause);
+
+    // Handle scroll behavior (same as earlier)
+    function isVideoInViewport() {
+        const rect = video.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function handleScroll() {
+        if (isVideoInViewport()) {
+            if (!isManuallyPaused && (!isAutoplayTriggered || video.paused)) {
+                video.play();
+                isAutoplayTriggered = true; // Mark autoplay as triggered
+                playPauseIcon.className = "fas fa-pause";
+            }
+        } else {
+            if (!video.paused) {
+                video.pause();
+                playPauseIcon.className = "fas fa-play";
+            }
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+});
 
 //NAVIGACE
 

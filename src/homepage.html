@@ -11,6 +11,7 @@
     <meta name="og:description" content="Okořská Garda | Oficiální stránky skupiny historického šermu Okořská Garda. Nabízíme středověká šermířská vystoupení a organizaci programu pro celodenní akce, historické dny i městské slavnosti. "/>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="/css/cookie-banner.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -92,20 +93,19 @@
             <p>Počet učinkujících: 7</p>
             <p>Délka vystoupení: 20 minut</p>
         </section>
-        <section id="" class="article-image">
-            <div class="gallery-trigger">
-                <div class="gallery-image-container">
-                    <img id="gallery-image-1" src="assets/prasident.jpg" alt="Gallery Image">
-                </div>
-                <div class="gallery-controls">
-                    <img class="gallery-icon" src="assets/icons/angle-left.png" alt="Left Arrow" onclick="prevImage(1)">
-                    <img class="gallery-icon" src="assets/icons/angle-right.png" alt="Right Arrow" onclick="nextImage(1)">
-                </div>
+        <section class="video-section">
+            <div class="video-container">
+                <video id="my-video" class="custom-video" muted>
+                    <source src="/assets/rozbita_huba_video.mp4" type="video/mp4">
+                    Vás prohlížeč nepodporuje video.
+                </video>
+                <button id="play-pause-btn" class="play-pause-btn">
+                    <i id="play-pause-icon" class="fas fa-play"></i>
+                </button>
             </div>
         </section>
     </div>
-
-
+ 
         <!-- Sekce "vystoupení 2"  -->
         <div class="grid-container">
             <section id="vystoupení 2" class="article vystoupeni-mobile">
@@ -414,7 +414,7 @@
 
 
      <script src="js/script.js"></script>
-    <!-- <script src="/js/cookies.js"></script> 
+     <script src="/cookies.js"></script> 
 
 
 </body>
