@@ -425,15 +425,12 @@ p {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background: #00000070;
+    background: none;
     border: none;
     cursor: pointer;
     font-size: 32px;
-    color: white;
     z-index: 1000;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    color: white;
 }
 
 .play-pause-btn:hover {
@@ -684,14 +681,20 @@ p {
 }
 
 .footer section {
-    display: flex; /* Přidáno display: flex */
-    flex-direction: row; /* Uspořádání ikon vedle sebe */
-    gap: 20px; /* Mezera mezi ikonami */
+    display: flex; 
+    flex-direction: row; 
+    gap: 20px; 
 }
 
 .footer-icon {
     display: flex;
     margin: 15px;
+}
+
+.footer-icon-big {
+    display: flex;
+    width: 125px;
+    height: 125px;
 }
 
 .icon-background {
@@ -816,8 +819,15 @@ p {
         width: 100%;
         box-sizing: border-box;
     }
+
+    .footer section {
+        display: flex; 
+        flex-direction: row; 
+        gap: 0px; 
+    }
     
 }
+
 
 /* mobile */
 @media (max-width: 600px) {
@@ -960,12 +970,15 @@ p {
     font-size: 16px;
     width: 100%;
     box-sizing: border-box;
-}
+    }
 
+    .footer section {
+    display: flex; 
+    flex-direction: row; 
+    gap: 0px;
+    }
 
-
-
- /* navigace */
+    /* navigace */
     .navbar ul {
         flex-direction: column; /* Drop-down styl pro mobilní zařízení */
         align-items: center;

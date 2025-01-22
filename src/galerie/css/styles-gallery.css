@@ -191,7 +191,7 @@ h3 {
 p {
     color: #fff;
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 150%;
 }
 
@@ -418,6 +418,12 @@ p {
     margin: 15px;
 }
 
+.footer-icon-big {
+    display: flex;
+    width: 125px;
+    height: 125px;
+}
+
 .icon-background {
     width: 48px; /* Velikost pozadí kolem ikony */
     height: 48px;
@@ -505,8 +511,14 @@ p {
         text-align: center;
         text-wrap: nowrap;
         z-index: 2;
-        
     }
+
+    .footer section {
+        display: flex; 
+        flex-direction: row; 
+        gap: 0px; 
+    } 
+}    
 
 
 /* mobile */
@@ -570,6 +582,11 @@ p {
         
     }
 
+    .footer section {
+        display: flex; 
+        flex-direction: row; 
+        gap: 0px; 
+    } 
 
 }
 
@@ -585,7 +602,7 @@ p {
         z-index: 2;
     }
 }
-}
+
 
 
 
