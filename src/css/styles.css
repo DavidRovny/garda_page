@@ -194,10 +194,17 @@ body {
     
 }
 
-.article li {
-    list-style-type: none;   
+.article li { 
     line-height: 3em;
     font-size: 150%;
+    margin: 0; 
+    padding: 0; 
+}
+
+.article ul {
+    list-style-type: none;   
+    margin: 0; 
+    padding: 0; 
 }
 
 .article-wide {
@@ -269,6 +276,10 @@ p {
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 150%;
+}
+
+strong {
+    font-family: Poppins;
 }
 
 /* Billboard */
