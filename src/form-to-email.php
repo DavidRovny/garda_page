@@ -30,7 +30,7 @@ if (isInjected($email) || isInjected($name) || isInjected($message)) {
 
 // Sestavení e-mailu
 $to = "xxx@mail.com";  // Nahraďte svou e-mailovou adresou
-$subject = "Nová zpráva z webového formuláře Jméno: $name Email: $email";
+$subject = "Nová zpráva z webového formuláře Jméno: $name\n Email: $email\n";
 $body = "Obdrželi jste novou zprávu od uživatele:\n\n".
         "Jméno: $name\n".
         "Email: $email\n".

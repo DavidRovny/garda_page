@@ -195,8 +195,8 @@ body {
 }
 
 .article li { 
-    line-height: 3em;
-    font-size: 150%;
+    line-height: 300%;
+    font-size: 1.5rem;
     margin: 0; 
     padding: 0; 
 }
@@ -806,6 +806,13 @@ strong {
         line-height: 150%;
     }
 
+    .article li { 
+        line-height: 300%;
+        font-size: 1.2rem;
+        margin: 0; 
+        padding: 0; 
+    }
+
     .article-wide p {
         text-align: center;
         margin: 0px 5%;
@@ -852,6 +859,13 @@ strong {
         font-size: 1.2rem;
         line-height: 150%;
     }
+
+    .article li { 
+        line-height: 300%;
+        font-size: 1.2rem;
+        margin: 0; 
+        padding: 0; 
+    }    
 
     h2 {
         margin-top: 0;
