@@ -1,0 +1,680 @@
+
+@font-face {
+    font-family: JosefinSans;
+    src: 
+    url("fonts/JosefinSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: Roboto;
+    src: 
+    url("fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Figtree;
+    src: 
+    url("fonts/Figtree-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: Poppins;
+    src: 
+    url("fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: 
+    url("fonts/Poppins-SemiBold.ttf");
+}
+
+body {
+    background-color: rgb(74, 63, 53);
+    color: #fff;
+    margin: 0;
+    font-family:Roboto, Poppins, Poppins-SemiBold, serif, Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1920px;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* Navigace */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #fff;
+}
+
+.navbar-menu {
+    list-style-type: none; /* Odstraní tečky u seznamu */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Mezera mezi odkazy */
+}
+
+.navbar-menu li a {
+    color: #fff; /* Barva textu odkazů */
+    text-decoration: none; /* Odstraní podtržení */
+    font-weight: bold;
+    padding: 10px 16px;
+    transition: background-color 0.3s ease; /* Efekt při hover */
+}
+
+.navbar-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Zvýraznění při hover */
+    border-radius: 4px;
+}
+
+.navbar-menu li a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.navbar-menu li a:active {
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 4px;
+}
+
+.anchor {
+    position: relative;
+    display: block;
+    margin-top: -60px; /* Výška navigace */
+    padding-top: 60px; /* Kompenzace pro margin */
+}
+
+
+/* Grid Container */
+.grid-container {
+    max-width: 1920px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 0;
+}
+
+.grid-container-triple {
+    max-width: 1920px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    margin: 0;
+}
+
+.grid-container-quatro {
+    max-width: 1920px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0;
+    margin: 0;
+}
+
+.grid-container-wide {
+    max-width: 1920px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+   }
+
+   .article {
+    padding: 30px;
+    box-sizing: border-box; /* Zahrne border do celkové šířky */
+}
+
+.article p {
+    text-align: left;
+}
+
+.article li { 
+    line-height: 300%;
+    font-size: 1.5rem;
+    margin: 0; 
+    padding: 0; 
+}
+
+.article ul {
+    list-style-type: none;   
+    margin: 0; 
+    padding: 0; 
+}
+
+.article-wide {
+    padding: 30px;
+    box-sizing: border-box; /* Zahrne border do celkové šířky */
+}
+
+.article-wide h2 {
+    text-align: center;
+}
+
+.article-image {
+    box-sizing: border-box; /* Zahrne border do celkové šířky */
+}
+
+.article-image-wide {
+    box-sizing: border-box; /* Zahrne border do celkové šířky */
+    overflow: hidden;
+    height: auto; 
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.article-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* transform: scale(0.7); /* Zmenší obrázek na 70 % */
+    /* transform-origin: center; /* Zajistí, že zmenšení bude z centra obrázku */
+}
+
+
+h1 {
+    margin-top: 0;
+}
+
+h2 {
+    margin-top: 0;
+    font-family: Poppins-SemiBold, sans-serif;
+    font-size: 4.2rem;
+}
+
+h3 {
+    margin-top: 0;
+    font-family: Poppins-SemiBold, sans-serif;
+    font-size: 2.5rem;
+}
+
+p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 150%;
+}
+
+strong {
+    font-family: Poppins;
+}
+
+
+
+/* Billboard */
+.billboard {
+    position: relative;
+    overflow: hidden;
+    height: auto; /* výška billboardu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.image-billboard {
+    height: 100%;
+    overflow-y: hidden;
+    object-fit: cover;
+}
+
+.desktop-image,
+.tablet-image,
+.mobile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.desktop-image {
+    display: block;
+}
+
+.tablet-image,
+.mobile-image {
+    display: none;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    }
+
+.overlay-billboard {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.425);
+    display: flex;
+    flex-direction: column;
+    /* height: 100%;
+    background: linear-gradient(#00000000, #000000dc); */
+}
+
+.billboard h1 {
+    position: absolute;
+    top: 55%;
+    font-size: 6vw; /* Škálovatelná velikost pro větší displeje */
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    text-wrap: nowrap;
+    z-index: 2;
+    
+}
+
+.billboard h2 {
+    position: absolute;
+    top: 75%;
+    font-size: 4vw; /* Škálovatelná velikost pro větší displeje */
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    text-wrap: wrap;
+    z-index: 2;
+    
+}
+
+/* Sekce */
+.intro {
+    padding: 30px;
+    margin: 0;
+    text-align: center;
+}
+
+
+.portret-profile {
+    display: flex; 
+    flex-direction: row; 
+    gap: 20px; 
+    margin-right: 40px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.portret-background img {
+    width: 100px; 
+    height: 100px;
+    background-color: #fff; /* Bílé pozadí */
+    border: 2px solid #fff; /* Tmavší rámeček */
+    border-radius: 50%; /* Kulatý tvar pozadí */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+/* Styl pro galerii */
+.gallery-trigger {
+    position: relative;
+    text-align: center;
+    object-fit: cover;
+    margin: 0;
+}
+
+.gallery-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-icon {
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Styl pro overlay */
+.gallery-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none; /* Skryté, dokud se neotevře */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.overlay-content {
+    text-align: center;
+}
+
+.close-overlay {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px 10px 6px 10px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.gallery-controls-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Nastavte maximální šířku podle designu */
+    margin: 30px auto; /* Centrovat na stránce */
+    overflow: hidden;
+    border-radius: 8px; /* Volitelně zaoblené rohy */
+    
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 450px; /* Nastavte výšku podle designu */
+    border: none;
+}
+
+#youtube-video {
+    width: 100%;
+    height: 450px;
+}
+
+.video-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #f48251;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.video-button:hover {
+    background-color: #e67343;
+}
+
+
+
+
+/* Footer design */
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.514);
+    max-width: 1920px;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    margin: 0;
+    padding: 30px;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+}
+
+.footer section {
+    gap: 20px; /* Mezera mezi ikonami */
+}
+
+.footer-icon {
+    display: flex;
+    margin: 15px;
+}
+
+.icon-background {
+    width: 48px; /* Velikost pozadí kolem ikony */
+    height: 48px;
+    background-color: #fff; /* Bílé pozadí */
+    border: 2px solid #333; /* Tmavší rámeček */
+    border-radius: 50%; /* Kulatý tvar pozadí */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.icon-background img {
+    width: 24px; /* Velikost samotné ikony */
+    height: 24px;
+}
+
+.footer-icon p {
+    color: #fff;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.view-on-mobile {
+    display: none;
+}
+
+
+.view-on-desktop {
+    display: block;
+}
+
+
+
+
+/* Responsivní design */
+/* tablet */
+@media (max-width: 880px) {
+    /* Přechod pro tablet */
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-container-triple {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-container-quatro {
+        grid-template-columns: 1fr;
+    }
+
+    .desktop-image {
+        display: none;
+    }
+
+    .view-on-mobile {
+        display: block;
+    }
+
+    .view-on-desktop {
+        display: none;
+    }
+
+    .tablet-image {
+        display: block;
+    }
+
+    .mobil-image {
+        display: none;
+    }
+
+    .billboard h1 {
+        position: absolute;
+        top: 55%;
+        font-size: 10vw; /* Škálovatelná velikost pro větší displeje */
+        color: #fff;
+        font-family: Poppins, sans-serif;
+        text-align: center;
+        text-wrap: nowrap;
+        z-index: 2;
+        
+    }
+
+    .billboard h2 {
+        position: absolute;
+        top: 75%;
+        font-size: 6vw;
+        color: #fff;
+        font-family: Poppins, sans-serif;
+        text-align: center;
+        text-wrap: nowrap;
+        z-index: 2;
+    }  
+
+    p {
+        color: #fff;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 150%;
+    }   
+    
+    .article li { 
+        line-height: 300%;
+        font-size: 1.2rem;
+        margin: 0; 
+        padding: 0; 
+    }    
+
+
+/* mobile */
+@media (max-width: 600px) {
+
+    h2 {
+        margin-top: 0;
+        font-family: Poppins-SemiBold, sans-serif;
+        font-size: 3rem;
+    }
+
+    .view-on-desktop {
+        display: none;
+    }
+
+    .view-on-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+   
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-container-triple {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-container-quatro {
+        grid-template-columns: 1fr;
+    }
+
+    .tablet-image {
+        display: none;
+    }
+
+    .desktop-image {
+        display: none;
+    }
+
+    .mobile-image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .billboard h1 {
+        position: absolute;
+        top: 55%;
+        font-size: 12vw; /* Škálovatelná velikost pro větší displeje */
+        color: #fff;
+        font-family: Poppins, sans-serif;
+        text-align: center;
+        text-wrap: wrap;
+        z-index: 2;
+        
+    }
+
+    .billboard h2 {
+        position: absolute;
+        top: 70%;
+        font-size: 10vw;
+        color: #fff;
+        font-family: Poppins, sans-serif;
+        text-align: center;
+        text-wrap: nowrap;
+        z-index: 2;
+      }
+
+      p {
+        color: #fff;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 150%;
+    }      
+
+      .article li { 
+        line-height: 300%;
+        font-size: 1.2rem;
+        margin: 0; 
+        padding: 0; 
+    }      
+
+}
+
+@media (min-width: 2048px) {
+    .billboard h1 {
+        position: absolute;
+        top: 50%;
+        font-size: 7vw; /* Škálovatelná velikost pro větší displeje */
+        color: #fff;
+        font-family: Poppins, sans-serif;
+        text-align: center;
+        text-wrap: nowrap;
+        z-index: 2;
+    }
+
+    .billboard h2 {
+        position: absolute;
+        top: 75%;
+        font-size: 4vw; /* Škálovatelná velikost pro větší displeje */
+        color: #fff;
+        font-family: Poppins, sans-serif;
+        text-align: center;
+        text-wrap: wrap;
+        z-index: 2;
+        
+    }
+
+    
+}
+
+
+}
+
+
+

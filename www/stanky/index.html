@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okořská Garda - Stánky</title>
+    <meta name="og:url" content="https://www.garda.cz/stanky"/>
+    <meta name="og:type" content="website"/>
+    <meta name="og:title" content="Okořská Garda | Stánky"/> 
+    <meta name="og:description" content="Okořská Garda | Informace a kontakt pro stánkaře. Kontaktní formulář."/>
+    <link rel="stylesheet" href="css/styles-stanky.css">
+    <link rel="stylesheet" href="/css/cookie-banner.css">
+    <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/icons/favicon.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/icons/favicon.png">
+    <link rel="icon" href="/assets/icons/favicon_large.png" sizes="192x192">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigace -->
+        <nav class="navbar">
+            <ul id="navbar-menu" class="navbar-menu">
+                <li><a href="/homepage.html#kontakty">Zpět na hlavní stránku</a></li>
+            </ul>
+        </nav>
+
+    <!-- Sekce "intro" -->
+    <div class="grid-container-wide">
+        <section  class="intro">
+            <h1>Informace pro stánkaře</h1>
+        </section>
+    </div>
+
+    
+
+     <!-- Sekce "kontaktni-formular-stanky" -->
+    <div class="grid-container">
+        <section id="Napise nám" class="article">
+            <h3>Potřebuji si o tom promluvit</h3>
+            <div class="kontakty-box">
+                <div class="portret-profile">
+                    <div class="portret-background">
+                        <img src="/assets/icons/Michal.png" alt="Facebook">
+                    </div>
+                    <p>Michal Niebauer</p>
+                </div>
+                <div>
+                    <p>tel. +420 732 343 083</p>
+                    <p>email: routers2@seznam.cz</p>    
+                </div>  
+
+        
+        </section>
+        <section id="kontaktni-formular" class="kontaktni-formular">
+                <h3>Mám stánek a chci přijet</h3>
+                <form id="contact-form" action="form-to-email-stanky.php" method="POST" onsubmit="return validateForm()" enctype="application/x-www-form-urlencoded">
+                <label for="name">Jméno a příjmení*</label>
+                <input type="text" id="name" name="name" required placeholder="Vaše jméno a příjmení">
+
+                <label for="dropdown">Akce kam chci přijet*</label>
+                <select id="dropdown" name="dropdown" required>
+                    <option value="TBA 1" selected>Točník</option>
+                <!--<option value="TBA 2">TBA 2</option> --> 
+                </select>
+
+                <label for="stanek">Druh stánku včetně rozmerů (1x2m a pod)*</label>
+                <textarea id="stanek" name="stanek" required placeholder="Popis stánku" maxlength="1200"></textarea>  
+
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required placeholder="Váš email">
+        
+                <label for="phone">Telefonní číslo</label>
+                <input type="tel" id="phone" name="phone" placeholder="Váš telefon">
+
+                <label for="message">Text zprávy</label>
+                <textarea id="message" name="message" placeholder="Vaše zpráva" maxlength="1200"></textarea>
+                <label>* Povinna pole k vyplnění
+
+                </label>
+        
+                <button type="submit">Odeslat formulář</button>
+        
+            </form>
+        </section>
+
+                <!-- Pop-up úspěšné odeslání -->
+                <div id="popup-success" class="popup-overlay">
+                    <div class="popup-content">
+                        <h2>Formulář byl úspěšně odeslán!</h2>
+                        <p>Děkujeme za vaši zprávu. Budeme vás brzy kontaktovat.</p>
+                        <button onclick="redirectToHomepage()">Zpět na hlavní stránku</button>
+                    </div>
+                </div>
+        
+                <!-- Pop-up chyba odeslání -->
+                <div id="popup-error" class="popup-overlay">
+                    <div class="popup-content">
+                        <h2>Něco se pokazilo</h2>
+                        <p>Bohužel se nepodařilo odeslat formulář. Zkuste to prosím znovu.</p>
+                        <button onclick="redirectToHomepage()">Zpět na hlavní stránku</button>
+                    </div>
+                </div>
+     </div>
+
+
+     <div id="cookie-banner" class="cookie-banner">
+        <p>
+            Tato stránka používá cookies aby pěkně vypadala a fungovala.
+        </p>
+        <p>
+            Na tomto webu nepoužíváme žádné sledovací cookies, pouze cookies nezbytné k plné funkčnosti stránek.
+        </p>
+        <p>
+            Příjmutím souhlasíte s použitím cookies.
+        </p>
+        <div class="cookie-banner-buttons">
+            <button onclick="acceptCookies()">Přijmout</button>
+            <button onclick="rejectCookies()">Odmítnout</button>
+        </div>
+    </div>
+
+    
+
+     <script src="js/script-stanky.js"></script>
+     <script src="/cookies.js"></script> 
+
+
+</body>
+</html>

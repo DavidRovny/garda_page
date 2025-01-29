@@ -83,6 +83,24 @@
         
             </form>
         </section>
+
+                <!-- Pop-up úspěšné odeslání -->
+                <div id="popup-success" class="popup-overlay">
+                    <div class="popup-content">
+                        <h2>Formulář byl úspěšně odeslán!</h2>
+                        <p>Děkujeme za vaši zprávu. Budeme vás brzy kontaktovat.</p>
+                        <button onclick="redirectToHomepage()">Zpět na hlavní stránku</button>
+                    </div>
+                </div>
+        
+                <!-- Pop-up chyba odeslání -->
+                <div id="popup-error" class="popup-overlay">
+                    <div class="popup-content">
+                        <h2>Něco se pokazilo</h2>
+                        <p>Bohužel se nepodařilo odeslat formulář. Zkuste to prosím znovu.</p>
+                        <button onclick="redirectToHomepage()">Zpět na hlavní stránku</button>
+                    </div>
+                </div>
      </div>
 
 

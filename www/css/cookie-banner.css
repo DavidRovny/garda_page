@@ -1,0 +1,60 @@
+/* Cookie banner */
+.cookie-banner {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(172, 172, 172);
+    text-align: center;
+    text-wrap: wrap;
+    padding: 50px 15px;
+    z-index: 1000;
+    box-sizing: border-box; 
+    overflow: hidden; 
+   /* display: none; /* Skryté, dokud není zobrazeno přes JS */
+}
+
+.cookie-banner p {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+}
+
+.cookie-banner-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 10px;
+}
+
+.cookie-banner-buttons button {
+    background-color: #fa7d09;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    min-width: 150px;
+}
+
+.cookie-banner-buttons button:hover {
+    background-color: #ff4301;
+}
+
+/* mobile */
+@media (max-width: 600px) {
+
+.cookie-banner p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: black;
+}
+    
+
+
+
+}

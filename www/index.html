@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okořská Garda</title>
+    <meta name="og:url" content="https://www.garda.cz/"/>
+    <meta name="og:type" content="website"/>
+    <meta name="og:title" content="Okořská Garda | Domovská stránka"/> 
+    <meta name="og:description" content="Okořská Garda | Oficiální stránky skupiny historického šermu Okořská Garda. Nabízíme středověká šermířská vystoupení a organizaci programu pro celodenní akce, historické dny i městské slavnosti."/>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/cookie-banner.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/icons/favicon.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/icons/favicon.png">
+    <link rel="icon" href="/assets/icons/favicon_large.png" sizes="192x192">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigace -->
+        <nav class="navbar">
+            <button type="button" class="navbar-toggle" onclick="toggleNavbar()">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <ul id="navbar-menu" class="navbar-menu">
+                <li><a href="#intro">Garda</a></li>
+                <li><a href="#program">Program 2025</a></li>
+                <li><a href="#vystoupeni">Naše vystoupení</a></li>
+                <li><a href="/galerie/index.html">Galerie</a></li>
+                <li><a href="/tocnik/index.html">Točník</a></li>
+                <li><a href="#kontakty">Kontakty</a></li>
+            </ul>
+        </nav>
+
+        <!-- Billboard -->
+        <section id="intro" class="anchor"></section>
+        <div class="billboard">
+                <div class="image-billboard">
+                <img src="assets/billboards/hero_desktop.jpg" alt="Billboard Image" class="desktop-image">
+                <img src="assets/billboards/hero_tablet.jpg" alt="Billboard Image" class="tablet-image">
+                <img src="assets/billboards/hero_mobile.jpg" alt="Billboard Image" class="mobile-image">
+            </div>
+            <div class="overlay-billboard"></div>
+            <h1>OKOŘSKÁ GARDA</h1>
+        </div>
+
+    <!-- Sekce "intro" -->
+    <div class="grid-container-wide">
+        <section  class="intro">
+            <h2>O nás</h2>
+            <p>Jsme skupina historického šermu Okořská Garda z Prahy a středních Čech, působící na jevišti více než 25 let.</p>
+
+            <p>Předvádíme scénický šerm, u kterého klademe důraz na dynamiku, co nejvěrnější přiblížení reálnému boji a příběhy, které naváhají zajít pro legraci až tam, kam se málokdo jiný odváží.
+            Předvádíme různé evropské národy ranného středověku a tomu odpovídají naše zbraně, zbroje i kostýmy.</p>
+        </section>
+    </div>
+
+    <!-- Sekce "Program" a "Nabízíme" -->
+    <section id="program" class="anchor"></section>
+    <div class="grid-container">
+        <section id="" class="article">
+            <h2>Program 2025</h2>
+            <p>Program pro váš připravujeme</p>
+            <!--  <ul>
+                <li>Akce 1</li>
+                <li>Akce 2</li>
+                <li>Akce 3</li>
+            </ul> -->
+        </section>
+        <section id="vystoupení" class="article">
+            <h3>Co vám můžeme nabídnout</h3>
+            <p>Nabízíme jednotlivá šermířská vystoupení, organizaci programu, zprostředkování historických trhů a řemesel, historickou lukostřelbu, vrhání seker a další.</p>
+            <ul>
+                <li>Šermířská vystoupení v rámci vašeho programu</li><hr>
+                <li>Organizace historických a městských slavností</li><hr>
+                <li>Zprostředkování dobových řemesel a trhů</li><hr>
+                <li>Atrakce pro návštěvníky (lukostřelba, vrhání seker, archery tag)</li><hr>
+                <li>Interaktivní dobová zbrojnice</li><hr>
+                <li>Historická kuchyně</li>
+            </ul>
+        </section>
+    </div>
+
+    <section id="vystoupeni" class="anchor"></section>
+    <div class="grid-container-wide">
+        <section id="" class="article-wide">
+            <h2 class="h2-no-margin">Naše vystoupení</h2>
+        </section>
+    </div>
+
+
+    <!-- Sekce "vystoupení 1" -->
+    <div class="grid-container">
+        <section id="vystoupení 1" class="article">
+            <h3>U rozbité huby</h3>
+            <p>Dva bratři hledající slávu a bohatství, tam kde by to níkdo nečekal. Jak to však dopadne? Vystoupení plné zvratů, překvapení a humoru.</p>
+            <p>Počet učinkujících: 7</p>
+            <p>Délka vystoupení: 20 minut</p>
+        </section>
+        <section class="video-section">
+            <div class="video-container">
+                <video id="my-video" class="custom-video" muted>
+                    <source src="/assets/rozbita_huba_video.mp4" type="video/mp4">
+                    Vás prohlížeč nepodporuje video.
+                </video>
+                <button id="play-pause-btn" class="play-pause-btn">
+                    <i id="play-pause-icon" class="fas fa-play"></i>
+                </button>
+            </div>
+        </section>
+    </div>
+ 
+        <!-- Sekce "vystoupení 2"  -->
+        <div class="grid-container">
+            <section id="vystoupení 2" class="article vystoupeni-mobile">
+                <h3>Drakkar</h3>
+                <p>Vikingové se vracejí domů z neúspěšné výpravy. Nápětí na palubě stoupá s každou mílí. Nefalšovaná košilatá severská Odyssea.</p>
+                <p>Počet učinkujících: 11</p>
+                <p>Délka vystoupení: 20 minut</p>
+                </section>
+            <section id="" class="article vystoupeni-tablet">
+                <h3>Drakkar</h3>
+                <p>Vikingové se vracejí domů z neúspěšné výpravy. Nápětí na palubě stoupá s každou mílí. Nefalšovaná košilatá severská Odyssea.</p>
+                <p>Počet učinkujících: 11</p>
+                <p>Délka vystoupení: 20 minut</p>
+            </section>
+            <section id="" class="article-image">
+                <div class="gallery-trigger">
+                    <div class="gallery-image-container">
+                        <img id="gallery-image-2" src="assets/drakkar/drakkar_01.jpg" alt="Gallery Image">
+                    </div>
+                    <div class="gallery-controls">
+                        <img class="gallery-icon" src="assets/icons/angle-left.png" alt="Left Arrow" onclick="prevImage(2)">
+                        <img class="gallery-icon" src="assets/icons/angle-right.png" alt="Right Arrow" onclick="nextImage(2)">
+                    </div>
+                </div>
+            </section>
+            <section id="" class="article vystoupeni-desktop">
+                <h3>Drakkar</h3>
+                <p>Vikingové se vracejí domů z neúspěšné výpravy. Nápětí na palubě stoupá s každou mílí. Nefalšovaná košilatá severská Odyssea.</p>
+                <p>Počet učinkujících: 11</p>
+                <p>Délka vystoupení: 20 minut</p>
+            </section>
+        </div>
+
+
+    <!-- Sekce "vystoupení 3" -->
+    <div class="grid-container">
+        <section id="vystounei 3" class="article">
+            <h3>Síň Válečníků</h3>
+            <p>Příběh z posmrtného života ve Valhalle. Bůh Ódin a jeho válečníci zbyli na hostině jako poslední a mají dlouhou chvíli. Tak proč by si nezkrátili čas vikingskými radovánkami?</p>
+            <p>Počet učinkujících: 5</p>
+            <p>Délka vystoupení: 15 minut</p>
+        </section>
+        <section id="" class="article-image">
+            <div class="gallery-trigger">
+                <div class="gallery-image-container">
+                    <img id="gallery-image-3" src="assets/sin/sin_1.jpg" alt="Gallery Image">
+                </div>
+                <div class="gallery-controls">
+                    <img class="gallery-icon" src="assets/icons/angle-left.png" alt="Left Arrow" onclick="prevImage(3)">
+                    <img class="gallery-icon" src="assets/icons/angle-right.png" alt="Right Arrow" onclick="nextImage(3)">
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Sekce "vystoupení 4"  -->
+        <div class="grid-container">
+            <section id="vystoupení 4" class="article vystoupeni-mobile">
+                <h3>Ukázky šermířských soubojů</h3>
+                <p>Jednotlivé ukázky soubojů. Předvedení rozličných zbraní, zbrojí a vybavení s komentářem o jejich využití v šermířskích technikách.</p>
+                <p>Počet učinkujících: variabilní</p>
+                <p>Délka vystoupení: variabilní</p>
+                </section>
+            <section id="" class="article vystoupeni-tablet">
+                <h3>Ukázky šermířských soubojů</h3>
+                <p>Jednotlivé ukázky soubojů. Předvedení rozličných zbraní, zbrojí a vybavení s komentářem o jejich využití v šermířskích technikách.</p>
+                <p>Počet učinkujících: variabilní</p>
+                <p>Délka vystoupení: variabilní</p>
+            </section>
+            <section id="" class="article-image">
+                <div class="gallery-trigger">
+                    <div class="gallery-image-container">
+                        <img id="gallery-image-2" src="assets/gallery_main/gallery_01.jpg" alt="Gallery Image">
+                    </div>
+                </div>
+            </section>
+            <section id="" class="article vystoupeni-desktop">
+                <h3>Ukázky šermířských soubojů</h3>
+                <p>Jednotlivé ukázky soubojů. Předvedení rozličných zbraní, zbrojí a vybavení s komentářem o jejich využití v šermířskích technikách.</p>
+                <p>Počet učinkujících: variabilní</p>
+                <p>Délka vystoupení: variabilní</p>
+            </section>
+        </div>    
+
+
+   
+
+    <!-- Overlay -->
+    <div id="gallery-overlay" class="gallery-overlay">
+    <span class="close-overlay" onclick="closeOverlay()">
+        <img src="assets/icons/cross.png" alt="Close">
+    </span>
+    <div class="overlay-content">
+        <img id="overlay-image" src="" alt="Gallery Image Full" style="width: 100%;">
+    </div>
+    <div class="gallery-controls-overlay">
+        <img class="gallery-icon" src="assets/icons/angle-left.png" alt="Left Arrow" onclick="prevImage(currentGallery)">
+        <img class="gallery-icon" src="assets/icons/angle-right.png" alt="Right Arrow" onclick="nextImage(currentGallery)">
+    </div>
+    </div>
+
+    <!-- Sekce "Galerie" --> 
+
+    <section id="galerie" class="anchor"></section>
+    <div class="grid-container-wide">
+        <section id="" class="article-wide">
+            <h2 class="h2-no-margin">Galerie</h2>
+        </section>
+    </div>
+
+    <!-- Sekce "Billboard" -->    
+
+    <section id="" class=""></section>
+        <div class="billboard-entry">
+            <a href="galerie/index.html">
+            <div class="image-billboard-entry">
+                <img src="assets/billboards/gallery_desktop.jpg" alt="Billboard Image" class="desktop-image">
+                <img src="assets/billboards/gallery_tablet.jpg" alt="Billboard Image" class="tablet-image">
+                <img src="assets/billboards/gallery_mobile.jpg" alt="Billboard Image" class="mobile-image">
+            </div>
+            <div class="overlay-billboard-entry">
+                <h3>navštívit galerii</h3>
+            </div>
+            </a>
+        </div>
+    
+
+
+    <!-- Sekce "Tocnik" -->
+    <section id="tocnik" class="anchor"></section>
+        <div class="grid-container-wide">
+            <section id="" class="article-wide">
+                <h2>Točník</h2>
+                <p>Druhý víkend v srpnu vás zveme na náš celodenní program na hradě Točník, kde se do středověku ponoříte naplno!</p>
+                <p>Čekají vás nejen naše šermířská vystoupení, ale i skvělá představení dalších historických skupin. 
+                K tomu si užijete atmosféru dobového tržiště, hudbu, řemesla, ukázky středověké kuchyně a kejklířské kousky, lukostřelba, vrhání seker, které vás nenechají na chvíli vydechnout a další doprovodný program. 
+                Tento den je plný zábavy a historických zážitků pro každého!</p>
+            </section>
+        </div>
+
+    <!-- Sekce "Billboard" -->   
+    
+        <section id="" class=""></section>
+        <div class="billboard-entry">
+            <a href="tocnik/index.html">
+            <div class="image-billboard-entry">
+                <img src="assets/billboards/tocnik_desktop.jpg" alt="Billboard Image" class="desktop-image">
+                <img src="assets/billboards/tocnik_tablet.jpg" alt="Billboard Image" class="tablet-image">
+                <img src="assets/billboards/tocnik_mobile.jpg" alt="Billboard Image" class="mobile-image">
+            </div>
+            <div class="overlay-billboard-entry">
+                <h3>více o Točníku</h3>
+            </div>
+            </a>
+        </div>       
+
+
+
+     <!-- Sekce "kontaktni-formular" -->
+    <section id="kontakty" class="anchor"></section>
+    <div class="grid-container-wide">
+        <section id="" class="article-wide">
+            <h2 class="h2-no-margin">Kontakty</h2>
+        </section>
+    </div>
+    <div class="grid-container">
+        <section id="Napise nám" class="grid-container">          
+                <div class="article">
+                <div class="portret-profile">
+                    <div class="portret-background">
+                        <img src="assets/icons/Ondrej.png" alt="Facebook">
+                    </div>
+                    <p>Ondřej Panenka</p>
+                </div>
+                <div>
+                    <p>Vedoucí skupiny</p>
+                    <p>tel. +420 732 118 149</p>
+                    <p>email: o.panenka@gmail.com</p>    
+                </div>
+    
+                <div class="portret-profile">
+                    <div class="portret-background">
+                        <img src="assets/icons/Krystof.png" alt="Facebook">
+                    </div>
+                    <p>Kryštof Zbytovský</p>
+                </div>
+                <div>
+                    <p>Zástupce vedoucího skupiny</p>
+                    <p>tel. +420 608 149 671</p>
+                    <p>email: k.zbytovsky@gmail.com</p>    
+                </div>
+    
+      
+                </div>
+            <div class="article">
+                <div class="portret-profile">
+                    <div class="portret-background">
+                        <img src="assets/icons/Michal.png" alt="Facebook">
+                    </div>
+                    <p>Michal Niebauer</p>
+                </div>
+                <div>
+                    <p>Kontakt pro stánkaře</p>
+                    <p>tel. +420 732 343 083</p>
+                    <p>email: routers2@seznam.cz</p>    
+                </div>  
+
+                <div class="cta-box">
+                        <a href="stanky/index.html" class="cta-button">Více informací pro stánkaře</a>
+                </div>
+        
+                </div>
+        </section>
+        <section id="kontaktni-formular" class="kontaktni-formular">
+                <h3>Nebo nám napište!</h3>
+                <form id="contact-form" action="form-to-email.php" method="POST" onsubmit="return validateForm()" enctype="application/x-www-form-urlencoded">
+                <label for="name">Jméno a příjmení*</label>
+                <input type="text" id="name" name="name" required placeholder="Vaše jméno a příjmení">
+        
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required placeholder="Váš email">
+        
+                <label for="phone">Telefonní číslo</label>
+                <input type="tel" id="phone" name="phone" placeholder="Váš telefon">
+
+                <label for="message">Text zprávy*</label>
+                <textarea id="message" name="message" required placeholder="Vaše zpráva" maxlength="1200"></textarea>
+                <label>* Povinna pole k vyplnění
+
+                </label>
+        
+                <button type="submit">Odeslat zprávu</button>
+        
+            </form>
+        </section>
+        <!-- Pop-up úspěšné odeslání -->
+        <div id="popup-success" class="popup-overlay">
+            <div class="popup-content">
+                <h2>Formulář byl úspěšně odeslán!</h2>
+                <p>Děkujeme za vaši zprávu. Budeme vás brzy kontaktovat.</p>
+                <button onclick="redirectToHomepage()">Zpět na hlavní stránku</button>
+            </div>
+        </div>
+
+        <!-- Pop-up chyba odeslání -->
+        <div id="popup-error" class="popup-overlay">
+            <div class="popup-content">
+                <h2>Něco se pokazilo</h2>
+                <p>Bohužel se nepodařilo odeslat formulář. Zkuste to prosím znovu.</p>
+                <button onclick="redirectToHomepage()">Zpět na hlavní stránku</button>
+            </div>
+        </div>
+
+     </div>
+     
+
+    <!-- Sekce "footer" -->
+    <div class="footer">
+        <section id="footer" >
+            <div class="footer-icon">
+                <a href="https://www.facebook.com/OkorskaGarda" target="_blank" class="icon-link">
+                    <div class="icon-background">
+                        <img src="assets/icons/facebook_original.png" alt="Facebook profil Okořská Garda">
+                    </div>
+                </a>
+            </div>
+            <div class="footer-icon">
+                <a href="https://www.instagram.com/okorska_garda/" target="_blank" class="icon-link">
+                    <div class="icon-background">
+                        <img src="assets/icons/instagram.png" alt="Instagram profil Okořská Garda">
+                    </div>
+                </a>
+            </div>
+        <!--    <div class="footer-icon">
+                <a href="*" target="_blank" class="icon-link">
+                    <div class="icon-background">
+                        <img src="assets/icons/youtube_original.png" alt="You Tube">
+                    </div>
+                </a>
+            </div>
+            <div class="footer-icon">
+                <a href="*" target="_blank" class="icon-link">
+                    <div class="icon-background">
+                        <img src="assets/icons/pine-cone_original.png" alt="John Kegle">
+                    </div>
+                </a>
+            </div> -->
+            
+        </section>
+    </div>
+
+    <div class="footer">
+        <section>
+            <dic style="display: flex; flex-direction: column;">
+            <div>
+                <img class="footer-icon-big" src="/assets/icons/slunda.png" alt="Slunda®">
+            </div>
+            <p style="text-align: center; line-height:0%; font-family: Poppins-SemiBold; font-size: 1.5rem;;">Slunda<sup>®</sup></p>
+        </dic>
+        </section>  
+    </div>
+
+
+
+    <div id="cookie-banner" class="cookie-banner">
+        <p>
+            Tato stránka používá cookies, aby pěkně vypadala a fungovala.
+        </p>
+        <p>
+            Na tomto webu nepoužíváme žádné sledovací cookies, pouze cookies nezbytné k plné funkčnosti stránek.
+        </p>
+        <p>
+            Příjmutím souhlasíte s použitím cookies.
+        </p>
+        <div class="cookie-banner-buttons">
+            <button onclick="acceptCookies()">Přijmout</button>
+            <button onclick="rejectCookies()">Odmítnout</button>
+        </div>
+    </div>
+
+
+     <script src="js/script.js"></script>
+     <script src="/cookies.js"></script> 
+
+
+</body>
+</html>
